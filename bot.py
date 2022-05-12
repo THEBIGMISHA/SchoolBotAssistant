@@ -1,10 +1,9 @@
 import telebot
-import config
 import random
 
 from telebot import types
 
-bot = telebot.TeleBot(config.TOKEN)
+bot = telebot.TeleBot(5219582195:AAE5uqpVU0o0wuJp_XVkk2NZ6ROkT1huUg4)
 
 @bot.message_handler(commands=['start'])
 def welcome(message):
@@ -18,7 +17,7 @@ def welcome(message):
 
     markup.add(item1, item2)
 
-    bot.send_message(message.chat.id, "Добро пожаловать, {0.first_name}!\nЯ - <b>{1.first_name}</b>, бот созданный чтобы помогать 7Д.".format(message.from_user, bot.get_me()),
+    bot.send_message(message.chat.id, "Добро пожаловать, {0.first_name}!\nЯ - <b>{1.first_name}</b>, бот созданный чтобы быть подопытным кроликом.".format(message.from_user, bot.get_me()),
         parse_mode='html', reply_markup=markup)
 
 @bot.message_handler(content_types=['text'])
