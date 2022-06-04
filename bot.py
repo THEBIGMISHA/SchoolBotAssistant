@@ -3,11 +3,10 @@ import random
 
 from telebot import types
 
-bot = telebot.TeleBot(5219582195:AAE5uqpVU0o0wuJp_XVkk2NZ6ROkT1huUg4)
-
+bot = telebot.TeleBot('5219582195:AAE5uqpVU0o0wuJp_XVkk2NZ6ROkT1huUg4')
 @bot.message_handler(commands=['start'])
 def welcome(message):
-    sti = open('static/welcome.webp', 'rb')
+    sti = open('DATA/ANIME1.webp', 'rb')
     bot.send_sticker(message.chat.id, sti)
 
     # keyboard
